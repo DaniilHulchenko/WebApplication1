@@ -15,7 +15,6 @@ namespace WebApplication1.Data.Repository
 
         public IEnumerable<Article> Articles => FMDBContext.Articles.Include(c => c.Category);
 
-        public IEnumerable<Article> GetFavorites => FMDBContext.Articles.Where(p => p.IsFavorite).Include(c => c.Category);
 
         public Article GetObjArticle(int id)
         {
